@@ -6,15 +6,9 @@ module.exports = {
         env: require('./dev.env'),
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
+        port: process.env.PORT || 4000,
         proxyTable: {},
-        host: 'localhost',
-        port: 4000,
-        autoOpenBrowser: false,
-        errorOverlay: true,
-        notifyOnErrors: true,
-        poll: false,
-        devtool: 'cheap-module-eval-source-map',
-        cacheBusting: true,
+        autoOpenBrowser: true,
         cssSourceMap: true
     },
     build: {

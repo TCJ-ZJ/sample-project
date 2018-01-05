@@ -26,7 +26,7 @@ app.use(webpackDevMiddleware(compiler, {
 app.use(webpackHotMiddleware(compiler));
 
 app.get('/', function (req, res) {
-    res.sendFile('../index.html');
+    res.sendFile('index.html');
 });
 app.use('/api', api);
 app.use(function(req, res, next) {

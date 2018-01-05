@@ -5,6 +5,7 @@ const utils = require('./utils');
 const config = require('../config');
 const vueLoaderConfig = require('./vue-loader.conf');
 const resolve = dir => path.join(__dirname, '..', dir);
+const webpack = require('webpack');
 
 module.exports = {
     context: path.resolve(__dirname, '../'),
@@ -37,7 +38,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+                include: [resolve('src')]
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

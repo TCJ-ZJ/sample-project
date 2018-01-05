@@ -89,6 +89,10 @@ module.exports = merge(baseWebpackConfig, {
                 to: config.build.assetsSubDirectory,
                 ignore: ['.*']
             }
-        ])
+        ]),
+        new webpack.DllReferencePlugin({
+            context: __dirname,
+            manifest: require('./vendor-manifest.json')
+        })
     ]
 });
